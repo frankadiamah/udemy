@@ -1,0 +1,153 @@
+<!-- {% comment %} <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              {% comment %} <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li> {% endcomment %
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              {% comment %} <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> {% endcomment %
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+     
+    {% block content %}
+        
+    {% endblock content %}
+        
+   
+ 
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+  </body>
+</html>  {% endcomment %} -->
+
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="{% static "practice/custom.css" %}">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="{% static "practice/CV.jpg" %}">
+
+  <title>Vasee Nyho</title>
+  </head>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="WXnrKRj8"></script>
+  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static "practice/CV.jpg" %}" width="30" height="30" class="d-inline-block align-top" alt="Frank's Logo">
+        <span>Vasee Nyho</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% static "practice/resum.pdf" %}">resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/frank-adiamah-ab3221257?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BM%2F6x%2FES0SVWRRyEalZomgw%3D%3D" >LinkedIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://youtu.be/_irji7FhG9Y" target="_blank">YouTube</a>
+          </li>
+          <li>
+          <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" 
+          data-width="5px" data-height="10px" data-small-header="true" data-adapt-container-width="true"
+          data-hide-cover="false" data-show-facepile="true">   
+          <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+          </li>
+          
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/profile.php?id=100071802701048" >Facebook</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/VaseeNyho" target="_blank">Twitter</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="{% url 'index' %}" >Videos</a>
+          </li> -->
+          <!-- target="_blank" this is used to send the user to a different tab in the browser -->
+          <li>
+            <a role="button" href="{% url 'index' %}" class="btn btn-primary">Video</a>
+          </li>
+          <li>
+            <a role="button" href="{% url 'my_template' %}" class="btn btn-primary">YouTube Upload</a>
+          </li>
+          <li>
+          <a role="button" href="{% url 'more:all_mores' %}" class="btn btn-primary">Blog</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    {% block content %} 
+    
+    {% endblock content %}
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <div id="fb-root"></div>
+</body>
+
+</html>

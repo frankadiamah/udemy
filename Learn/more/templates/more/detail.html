@@ -1,0 +1,22 @@
+
+{% load static %}
+
+{% block content %}
+
+<h1 class="text-center mt-5" id="moredetailtitle">{{ more.title }}</h1>
+
+<h5 class="text-center text-muted mb-5">{{ more.date|date:'F jS Y' }}</h5>
+
+<p>{{ more.description|safe }}</p>
+
+{% endblock %}
+<!-- {% comment %} {% extends 'practice/base.html' %} 
+
+
+{% block content %}
+    
+
+<h1>{{more.title}}</h1> 
+<h2>---{{ more.date|date:'F jS Y' }}---</h2> 
+<h1>{{more.description|safe}}</h1> 
+{% endblock content %} {% endcomment %} -->

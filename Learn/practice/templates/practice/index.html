@@ -1,0 +1,47 @@
+
+{% extends 'practice/base.html' %}
+
+{% block content %}
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mt-5">
+      <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="form__group form__group">
+
+        <label form="">Caption</label>
+        <input id="text" name="text" type="text" placeholder="Please your caption" />
+
+        <button class="btn btn-success btn-lg mt-3 mb-3">Upload</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class= "row">
+    {% for x in all_video %}
+      <div class="col-md-4 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ x.caption }}</h5>
+            <video class="embed-responsive embed-responsive-16by9" controls="controller">
+              <source src="{{ x.video.url }}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+

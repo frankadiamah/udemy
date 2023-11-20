@@ -1,0 +1,39 @@
+
+
+<!-- {% extends 'practice/base.html' %} -->
+
+{% block content %}
+
+{% load embed_video_tags %}
+
+
+<!-- The video tag: -->
+{% video item.video as my_video %}
+  URL: {{ my_video.url }}
+  Thumbnail: {{ my_video.thumbnail }}
+  Backend: {{ my_video.backend }}
+
+  {% video my_video "small" %}
+{% endvideo %}
+
+<!-- Or embed shortcut: -->
+{% video my_video '800x600' %}
+<!-- <div class="row">
+  {% for item in items %}   
+  <div class="col-md-4, col-sm-6 mb-4">
+    <div class="video-container">
+      {% video item.video as my_video %}
+        <video controls width="70%" height="70%">
+          <source src="{{ my_video.url }}" type="{{ my_video.backend }}">
+          Your browser does not support the video tag.
+        </video>
+        {% endvideo %}
+    </div>
+      {% video my_video "small" %}
+      {% video my_video '800x600' %}
+      
+  </div>
+    {% endfor %}
+</div> -->
+  
+{% endblock %}

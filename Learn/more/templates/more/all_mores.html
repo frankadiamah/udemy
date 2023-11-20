@@ -1,0 +1,50 @@
+
+{% extends 'practice/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1 id="moretitle" class="font-weight-bold text-center">Blog</h1>
+
+<h3 class="text-center mb-5">Frank has done {{ mores.count }} YouTube video{{ mores.count|pluralize }}</h3>
+
+{% for more in mores %}
+<div class="row justify-content-center my-3">
+  <div class="col-md-10">
+    <a href="{% url 'more:detail' more.id %}">
+
+      <h2>{{ more.title }}</h2>
+    </a>
+    <h5 class="text-muted">{{ more.date|date:'M d Y'|upper }}</h5>
+    <h4>{{ more.description|striptags|truncatechars:30 }}</h4>
+  </div>
+</div>
+
+{% endfor %}
+<!-- &tk&i2r!mJAXmVHSWp
+   password for vasMall -->
+{% endblock content %}
+<!-- {% include 'more/post_detail.html' %} -->
+<!-- {% comment %} {% extends 'practice/base.html' %}  
+
+ 
+{% block content %}
+    
+
+<h1>Create horizontal</h1>
+
+<h2>Frank has written {{mores.count}} more posts about forex{{mores.count|pluralize}}</h2>
+
+
+<a href="{% url 'home' %}">Back Home</a>
+
+{% for more in mores %}
+{% comment %} We add more column detail because in the URL We set app name Equals to Blog.So in the all_more.HTML if we are setting there you are link for the blog title.We have to say.More:id  because if you have many apps in the project.It will cause confusion if we don't specify which app.Name we want there you are to map to. {% endcomment %
+<a href= "{% url 'more:detail' more.id %}"><h2>{{more.title}}</h2></a>
+<p>{{more.date|date:'M d Y'|upper}}</p>
+<p>{{more.description|striptags|truncatechars:10}}</p>
+
+{% endfor %}
+
+{% endblock content%} {% endcomment %} -->

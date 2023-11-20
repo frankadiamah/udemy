@@ -1,0 +1,120 @@
+.navbar-nav .nav-link {
+    color: rgb(215, 125, 238) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(240, 111, 5, 0.5) !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#moretitle {
+    font-size: 6rem;
+}
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #moredetailtitle {
+        font-size: 5rem;
+    }
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    background-color: #dfdbdb;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.container:hover {
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+}
+/* .img{
+
+} */
+/* Style the home text */
+#hometext {
+    font-size: 2rem;
+    color: #292525;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+  
+  /* Style the portfolio section */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+hr {
+   height: 2px;
+   border: none;
+   background-color: #333;
+   margin-bottom: 3rem;
+  }
+
+.col-lg-4,col-md-6:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+  
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+p {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+/* Styling the navigation bar */
+.nav {
+    background-color: #140b0f;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px -6px #eb0808;
+    
+}
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    
+}
+.nav ul li {
+    margin: 0 1rem;
+    list-style: none;
+    
+}
+.nav ul li a {
+    color: #803874;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+  
+}
+/* .class{
+    grid-template-columns: 3fr 1fr;
+} */
+
+.nav ul li a:hover {
+    color: #007bff;
+}
